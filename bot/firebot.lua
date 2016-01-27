@@ -220,6 +220,8 @@ function create_config( )
     "invite✘",
     "all✓",
     "leave_ban✓"
+    "search_google✓"
+    "echo✓"
     },
     sudo_users = {81444630},--Sudo users
     disabled_channels = {},
@@ -296,6 +298,13 @@ Get a list of all groups
 !list realms گروه های رلیم
 Get a list of all realms
 
+!echo برگرداندن نوشته توسط بات
+مانند: !echo سلام
+
+
+!google سرچ یه صفحه در گوگل
+مانند: !google web
+
 !log
 Grt a logfile of current group or realm
 
@@ -354,6 +363,12 @@ Set group name
 
 !rules قوانین
 Group rules
+
+!google سرچ در گوگل
+مانند !google web
+
+!echo برگرداندن نوشته توسط بات
+مانند !echo سلام
 
 !id ایدی
 return group id or user id
