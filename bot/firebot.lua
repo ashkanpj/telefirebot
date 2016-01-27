@@ -204,24 +204,24 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "onservice",
-    "inrealm",
-    "ingroup",
-    "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
-    "set",
-    "get",
-    "broadcast",
-    "download_media",
-    "invite",
-    "all",
-    "leave_ban"
+    "onservice✓",
+    "inrealm✓",
+    "ingroup✓",
+    "inpm✓",
+    "banhammer✓",
+    "stats✓",
+    "anti_spam✓",
+    "owners✓",
+    "arabic_lock✓",
+    "set✓",
+    "get✓",
+    "broadcast✓",
+    "download_media✓",
+    "invite✘",
+    "all✓",
+    "leave_ban✓"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {81444630},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v2 - Open Source
@@ -246,184 +246,179 @@ Our channels
 @iranseed [persian]
 ]],
     help_text_realm = [[
-Realm Commands:
+Realm Commands:لیست کمک گپ مخصوص
 
-!creategroup [Name]
+!creategroup [Name] ساخت گروه
 Create a group
 
-!createrealm [Name]
+!createrealm [Name]  ساخت گروه رلیم
 Create a realm
 
-!setname [Name]
+!setname [Name] اسم
 Set realm name
 
-!setabout [GroupID] [Text]
+!setabout [GroupID] [Text]درباره گپ
 Set a group's about text
 
-!setrules [GroupID] [Text]
+!setrules [GroupID] [Text]گذاشتن قانون
 Set a group's rules
 
-!lock [GroupID] [setting]
+!lock [GroupID] [setting]قفل کردن
 Lock a group's setting
 
-!unlock [GroupID] [setting]
+!unlock [GroupID] [setting] باز کردن قفل
 Unock a group's setting
 
-!wholist
+!wholist لیست فایل اعضا
 Get a list of members in group/realm
 
-!who
+!who لیست اعضا
 Get a file of members in group/realm
 
-!type
+!type نوشته
 Get group type
 
-!kill chat [GroupID]
+!kill chat [GroupID]دیلیت کردن گپ توسط سودو
 Kick all memebers and delete group
 
-!kill realm [RealmID]
+!kill realm [RealmID] حذف کردن روه رلیم توسط سودو
 Kick all members and delete realm
 
-!addadmin [id|username]
+!addadmin [id|username]اضافه کردن ادمین اصلی بات
 Promote an admin by id OR username *Sudo only
 
-!removeadmin [id|username]
+!removeadmin [id|username] حذف ادمین اصلی بات
 Demote an admin by id OR username *Sudo only
 
-!list groups
+!list groups لیست گروه ها
 Get a list of all groups
 
-!list realms
+!list realms گروه های رلیم
 Get a list of all realms
 
 !log
 Grt a logfile of current group or realm
 
-!broadcast [text]
+!broadcast [text] ارسال پیام همگانی برای تمام گپ ها توسط سودو
 !broadcast Hello !
 Send text to all groups
 Only sudo users can run this command
 
-!br [group_id] [text]
+!br [group_id] [text] ارسال پیام برای یک گروه 
 !br 123456789 Hello !
 This command will send text to [group_id]
 
 
 **U can use both "/" and "!" 
+برای استفاده از دستورات از ! و / استفاده کنید
 
+باتشکر از شما که از فار استفاده میکنید
 
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+برای خرید گروه به ایدی @ashi_admin1_kaboos مراجعه کنید
 ]],
     help_text = [[
-Commands list :
+Commands list :لیست کمک گپ فایر
 
-!kick [username|id]
+!kick [username|id]حذف
 You can also do it by reply
 
-!ban [ username|id]
+!ban [ username|id]بن
 You can also do it by reply
 
-!unban [id]
+!unban [id]ان بن
 You can also do it by reply
 
-!who
+!whoلیست اعضا
 Members list
 
 !modlist
-Moderators list
+Moderators listلیست مدیران گروه
 
-!promote [username]
+!promote [username]ترفیع درجه در گروه
 Promote someone
 
-!demote [username]
+!demote [username]حذف از لیست مدیران
 Demote someone
 
-!kickme
+!kickme حذف خود
 Will kick user
 
-!about
+!about درباره
 Group description
 
-!setphoto
+!setphoto گذاشتن عکس
 Set and locks group photo
 
-!setname [name]
+!setname [name]گذاشتن نام
 Set group name
 
-!rules
+!rules قوانین
 Group rules
 
-!id
+!id ایدی
 return group id or user id
 
-!help
+!help کمک
 
-!lock [member|name|bots|leave]	
+!lock [member|name|bots|leave]	قفل کردن اعضا.نام.ربات.خروج بات از گروه
 Locks [member|name|bots|leaveing] 
 
-!unlock [member|name|bots|leave]
+!unlock [member|name|bots|leave] باز کردن قفل اعضا.نام.بات.وخروج بات از گروه
 Unlocks [member|name|bots|leaving]
 
-!set rules <text>
+!set rules <text> گذاشتن قوانین
 Set <text> as rules
 
-!set about <text>
+!set about <text> گذاشتن مطلبی برای گپ
 Set <text> as about
 
-!settings
+!settings تنظیمات
 Returns group settings
 
-!newlink
+!newlink ساخت لینک جدید
 create/revoke your group link
 
-!link
+!link لینک گروه
 returns group link
 
-!owner
+!owner صاحبان گروه
 returns group owner id
 
-!setowner [id]
+!setowner [id]اضافه کردن صاحب گپ
 Will set id as owner
 
-!setflood [value]
+!setflood [value]گذاشت یه حد برای اسپم
 Set [value] as flood sensitivity
 
-!stats
+!stats وضعیت
 Simple message statistics
 
-!save [value] <text>
+!save [value] <text>ذخیره
 Save <text> as [value]
 
-!get [value]
+!get [value]گرفتن
 Returns text of [value]
 
-!clean [modlist|rules|about]
+!clean [modlist|rules|about]حذف کردن
 Will clear [modlist|rules|about] and set it to nil
 
-!res [username]
+!res [username]درباره یک نفر
 returns user id
 "!res @username"
 
 !log
 will return group logs
 
-!banlist
+!banlist لیست بن شدگان
 will return group ban list
 
 **U can use both "/" and "!" 
+برای استفاده از ربات از ! و / استفاده کنید
 
 
-*Only owner and mods can add bots in group
+*برای خرید گروه به این ایدی برید @ashi_admin1_kaboos
 
-
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only owner can use res,setowner,promote,demote and log commands
+باتشکر که فایر را انتخاب کردید
 
 ]]
   }
