@@ -220,8 +220,8 @@ function create_config( )
     "invite✘",
     "all✓",
     "leave_ban✓"
-    "search_google✓"
-    "echo✓"
+    "search_google✘"
+    "echo✘"
     },
     sudo_users = {81444630},--Sudo users
     disabled_channels = {},
